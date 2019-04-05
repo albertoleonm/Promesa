@@ -16,6 +16,7 @@ class Admin extends CI_Controller {
         $this->load->view('admin/complements/header-admin', $data);
         $this->load->view('admin/index');
         $this->load->view('admin/complements/footer-admin');
+        
     }
 
     public function dashboard(){

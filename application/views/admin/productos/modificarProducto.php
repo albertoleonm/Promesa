@@ -39,7 +39,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="card-users">
                     <form action="<?=base_url();?>admin/modifyProducto" method="POST" enctype="multipart/form-data">
-                        <center><h3><i class="fas fa-truck-loading"></i> Modificar Productos</h3>
+                        <center><h3><i class="fas fa-truck-loading"></i> Modificar Productos </h3>
                     </center>
                     <br>
                     <input type="hidden" name="idProducto" value="<?=$producModify->idProducto?>">

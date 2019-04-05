@@ -47,7 +47,7 @@
                 <label for="descripcion">Descripcion del producto:</label>
                 <textarea type="text" name="descripcion" id="descripcion" cols="30" maxlength="200" rows="2" class="form-control"></textarea>
                 <br>
-                <label for="precioProducto">Precio del producto:</label>
+                <label for="precioProducto">Precio del producto: </label>
                 <input type="text" name="precioProducto" id="precioProducto" maxlength="5" class="form-control">
                 <br>
                 <label for="ventaProducto">Precio venta del producto:</label>

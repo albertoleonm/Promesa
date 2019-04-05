@@ -36,7 +36,7 @@
 <div class="container">
     <div class="col-lg-12">
         <div class="card-users">
-            <center><h3><i class="fas fa-users"></i> Agregar administradores</h3></center>
+            <center><h3><i class="fas fa-users"></i> Agregar administradores </h3></center>
             <br>
             <center><span id="error" class="errorC"></span></center>
             <br>

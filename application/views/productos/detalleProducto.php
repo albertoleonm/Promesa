@@ -34,7 +34,7 @@
             <hr>
             <p>Detalle técnico</p>
             <ul>
-                <li>Precio: <strong style="color: #f60305;">$<?=$detalle->pVenta;?></strong></li>
+                <li>Precio: <strong style="color: #f60305;">$ <?=$detalle->pVenta;?></strong></li>
             </ul>
         </div>
     </div>

@@ -53,7 +53,7 @@
                         <input type="hidden" name="idUsuario" value="<?=$this->session->userdata('idUsuario')?>">
                         <input type="hidden" name="idPregunta" value="<?=$questionM->idPregunta;?>">
                         <br>
-                        <center><button class="btn add-users" onclick="return validarPreguntas();">Modificar pregunta</button></center>
+                        <center><button class="btn add-users" onclick="return validarPreguntas();">Modificar pregunta </button></center>
                     <?php } ?>
                 </form>
             </div>

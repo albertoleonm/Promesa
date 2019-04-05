@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title><?=$title;?></title>
   <link rel="shortcut icon" type="image/ico" href="<?=base_url();?>images/favicon.ico"/>
-  <!-- Font Awesome -->
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
   <link href="<?=base_url();?>css/bootstrap.min.css" rel="stylesheet">

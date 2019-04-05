@@ -35,7 +35,7 @@
 <br>
 <div class="container">
     <div class="row">
-        <h3 style="color: #fff;">- Bandeja de mensajes no leídos - </h3>
+        <h3 style="color: #fff;">- Bandeja de mensajes no leídos -  </h3>
     </div>
     <br>
     <div class="row">

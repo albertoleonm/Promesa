@@ -8,5 +8,6 @@ class Inicio extends CI_Controller {
                 $this->load->view('complements/header', $data);
                 $this->load->view('inicio/index');
                 $this->load->view('complements/footer');
-	}
+        }
+        
 }

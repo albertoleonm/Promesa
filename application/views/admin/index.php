@@ -24,12 +24,12 @@
     <center>
         <div class="see" id="messageUser">
                 <div class="alert alert-danger" role="alert">
-                    <p><i class="fas fa-user"></i> El campo USUARIO esta vacio.</p>
+                    <p><i class="fas fa-user"></i> El campo USUARIO esta vacio</p>
                 </div>
             </div>
             <div class="see" id="messagePass">
                 <div class="alert alert-danger" role="alert">
-                <p><i class="fas fa-unlock"></i> El campo CONTRASEÑA esta vacio.</p>
+                <p><i class="fas fa-unlock"></i> El campo CONTRASEÑA esta vacio</p>
             </div>
         </div>
     </center>

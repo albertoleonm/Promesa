@@ -1,4 +1,3 @@
-  <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="<?=base_url();?>/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->

@@ -62,7 +62,7 @@
 
 <!-- Copyright -->
 <div class="text-center py-3 contenedor-footer-down">© <?=date('Y');?> Copyright:
-  <a href="<?=base_url();?>"> promesa.com</a>
+  <a href="<?=base_url();?>"> promesa.mx</a>
 </div>
 <!-- Copyright -->
 

@@ -19,7 +19,6 @@
 
 <body>
 <header>
-  <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
   <div class="container">

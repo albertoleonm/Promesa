@@ -65,7 +65,7 @@
         var pass = document.getElementById('contrasena').value;
         var clave = document.getElementById('clave').value;
         if(name == '' || pass == '' || clave == ''){
-            document.getElementById('error').innerHTML = '<i class="fas fa-user-times"></i> Todos los campos tienen que estar llenos para modificar.';
+            document.getElementById('error').innerHTML = '<i class="fas fa-user-times"></i> Todos los campos tienen que estar llenos para modificar';
             return false;
         }else{
             return true;

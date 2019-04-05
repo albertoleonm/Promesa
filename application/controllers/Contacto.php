@@ -21,5 +21,6 @@ class Contacto extends CI_Controller {
         $this->Contacto_model->set_mensaje($this->input->post("mensaje"));
         $this->Contacto_model->save_Comentario();
         redirect('contacto');
+        
     }
 }

@@ -53,7 +53,7 @@
                         <th scope="col">Ganancia</th>
                         <th scope="col">Usuario</th>
                         <th scope="col">Imagen</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Acciones </th>
                         </tr>
                     </thead>
                     <tbody>

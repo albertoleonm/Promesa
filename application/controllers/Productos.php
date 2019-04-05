@@ -25,4 +25,5 @@ class Productos extends CI_Controller {
         $this->load->view('productos/detalleProducto', $dataProducto);
         $this->load->view('complements/footer');
     }
+    
 }

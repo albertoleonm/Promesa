@@ -23,4 +23,5 @@ class Preguntas extends CI_Controller {
         $this->Pregunta_model->add_Pregunta();
         redirect('preguntas');
     }
+    
 }

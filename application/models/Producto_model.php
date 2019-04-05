@@ -140,6 +140,7 @@ class Producto_model extends CI_Model{
 		$this->db->join('imagen', 'imagen.idImagen = producto.producto_idImagen');
 		$productoListar = $this->db->get();
 		return $productoListar->result();
+		
 	}
 
 	public function productosPublicados(){

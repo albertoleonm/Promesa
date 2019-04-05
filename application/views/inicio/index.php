@@ -2,7 +2,7 @@
         <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
             <div class="container contenedor-secundario flex-center flex-column">
                 <img src="<?=base_url();?>/images/logo.png" alt="Promesa Logo" class="logo">
-                <center><h2>Preservando lo mexicano.</h2></center>
+                <center><h2>Preservando lo mexicano</h2></center>
             </div>
         </div>
         <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">

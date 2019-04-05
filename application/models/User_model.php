@@ -42,6 +42,7 @@ class User_model extends CI_Model{
 
 	public function set_clave($_clave){
 		$this->_clave = $_clave;
+		
 	}
 
 	public function get_estatus(){

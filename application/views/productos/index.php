@@ -1,6 +1,6 @@
 <br>
 <div class="container">
-<center><h1>Consume lo natural</h1></center>
+<center><h1>Consume lo natural.</h1></center>
     <div class="row">
     <?php foreach($productosPublicados as $productos){?>
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 producto">

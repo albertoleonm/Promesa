@@ -38,7 +38,7 @@
 <div class="container">
 <div class="row">
 <?php if($this->session->userdata('estatus') == 1){ ?>
-    <a href="<?=base_url();?>admin/agregarUsuarios" class="btn add"><i class="fas fa-user-plus"></i> Agregar usuario</a>
+    <a href="<?=base_url();?>admin/agregarUsuarios" class="btn add"><i class="fas fa-user-plus"></i> Agregar usuario </a>
 <?php }else{ echo '<h3 style="color: #fff;">- Solo puedes ver los usuarios.</h3>';} ?>
 </div>
 <br>

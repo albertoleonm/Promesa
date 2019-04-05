@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-md-12 col-lg-12 col-xl-12">
             <div class="card-users">
-            <center><h3><i class="far fa-question-circle"></i> Agregar preguntas</h3></center>
+            <center><h3><i class="far fa-question-circle"></i> Agregar preguntas </h3></center>
             <br>
             <center><span id="error" class="errorC"></span></center>
             <br>

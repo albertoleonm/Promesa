@@ -8,5 +8,6 @@ class Nosotros extends CI_Controller {
         $this->load->view('complements/header', $data);
         $this->load->view('nosotros/index');
         $this->load->view('complements/footer');
-	}
+    }
+    
 }

@@ -55,7 +55,7 @@
             document.getElementById('errorComent').innerHTML = "El campo mensaje es obligatorio";
             return false;
         }else if(!expre.test(mail)){
-            document.getElementById('errorMail').innerHTML = "El correo electrónico '" + mail + "' no es valido, intenta de nuevo.";
+            document.getElementById('errorMail').innerHTML = "El correo electrónico  '" + mail + "' no es valido, intenta de nuevo.";
             return false;
         }else{
             alert("Nos pondremos en contacto contigo, gracias");

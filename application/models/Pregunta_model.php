@@ -90,6 +90,7 @@ class Pregunta_model extends CI_Model{
             }
         }catch(PDOException $e){
             die($e);
+            
         }
     }
 

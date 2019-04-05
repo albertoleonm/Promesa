@@ -5,7 +5,7 @@
             <div class="container flex-center flex-column">
                 <img src="<?=base_url();?>/images/logo.png" alt="Promesa Logo" class="logo-about">
                     <p class="text-about">Esta microempresa se dedica a la producción y comercialización de su producto
-                    <strong style="color: #1f9f86;">Galle tino</strong>; galletas de vino tinto, elaboradas con materia prima mexicana.
+                    <strong style="color: #1f9f86;">Galletino</strong>; galletas de vino tinto, elaboradas con materia prima mexicana.
                     De tal manera que <strong style="color: #1f9f86;">PROMESA</strong> promueve la cultura mexicana por medio de sus productos.</p>
 
             </div>

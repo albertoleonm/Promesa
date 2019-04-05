@@ -65,7 +65,7 @@
                                 <center>
                                 <?php if($question->publicado == 1){echo '<a href="'. base_url() . 'admin/despublicar/' . $question->idPregunta . '" class="btn leido">Despublicar</a>';}
                                 else{echo'<a href="'. base_url() . 'admin/publicar/' . $question->idPregunta . '" class="btn leido">Publicar</a>';} ?>
-                                <a href="<?=base_url();?>admin/modificarPregunta/<?=$question->idPregunta;?>" class="btn add">Modificar</a>
+                                <a href="<?=base_url();?>admin/modificarPregunta/<?=$question->idPregunta;?>" class="btn add">Modificar </a>
                                 </center>
                             </td>
                         </tr>
