@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2019 a las 21:47:35
--- Versión del servidor: 5.7.25-0ubuntu0.16.04.2
--- Versión de PHP: 7.2.11
+-- Tiempo de generación: 05-04-2019 a las 08:54:36
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -131,9 +131,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `p_AddUsuario` (IN `_usuario` VARCHA
     SELECT TRIM(_estatus) INTO estsinEspacio;
     
  
-	SELECT COUNT(nombre) INTO aux FROM usuario WHERE nombre = ususinEspacio;
+	SELECT COUNT(clave) INTO aux FROM usuario WHERE clave = clasinEspacio;
     
-    IF (aux > 1) THEN
+    IF (aux > 0) THEN
 		SELECT "El usuario ya esta agregado";
     ELSEIF (ususinEspacio = "") THEN
 		SELECT "El campo Usuario no puede estar vacio";
@@ -203,6 +203,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `p_ModUsuario` (IN `_idUsuario` INT,
     DECLARE consinEspacio VARCHAR(50);
 	DECLARE clasinEspacio VARCHAR(50);
     DECLARE aux int;
+    DECLARE flag int;
 
     SELECT TRIM(_usuario) INTO ususinEspacio;
     SELECT TRIM(_contrasena) INTO consinEspacio;
@@ -212,15 +213,26 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `p_ModUsuario` (IN `_idUsuario` INT,
 	
     IF (aux < 1) THEN
 		SELECT "El usuario no existe";
-	ELSEIF (ususinEspacio = "") THEN
-		SELECT "El campo Usuario no puede estar vacio";
-	ELSEIF (consinEspacio = "") THEN
-		SELECT "El campo Contraseña no puede estar vacio";
-	ELSEIF (clasinEspacio = "") THEN
-		SELECT "El campo Estatus no puede estar vacio";
-	ELSE
-		UPDATE usuario SET nombre = ususinEspacio, contrasena = consinEspacio, clave = clasinEspacio
-		WHERE idUsuario = _idUsuario;
+	ELSEIF (aux > 0) THEN
+		SELECT COUNT(clave) INTO flag FROM usuario WHERE idUsuario = _idUsuario AND clave = clasinEspacio;
+        
+        IF(flag < 1) THEN
+			SELECT COUNT(clave) INTO flag FROM usuario WHERE clave = clasinEspacio;
+			IF (flag > 0) THEN
+				SELECT "La clave ya fue registrada.";
+			END IF;
+		ELSE 
+			IF (ususinEspacio = "") THEN
+				SELECT "El campo Usuario no puede estar vacio";
+			ELSEIF (consinEspacio = "") THEN
+				SELECT "El campo Contraseña no puede estar vacio";
+			ELSEIF (clasinEspacio = "") THEN
+				SELECT "El campo Clave no puede estar vacio";
+			ELSE
+				UPDATE usuario SET nombre = ususinEspacio, contrasena = consinEspacio, clave = clasinEspacio
+				WHERE idUsuario = _idUsuario;
+			END IF;
+        END IF;
 	END IF;
 END$$
 
@@ -320,7 +332,8 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`idComentario`, `comentario_idUsuario`, `nombreUsuario`, `comentario`, `mail`, `leido`) VALUES
-(5, 1, 'Pedrito Sola', 'Este es un mensaje de Pedrito Sola desde el formulario.', 'pedritoSola@gmail.com', 1);
+(5, 1, 'Pedrito Sola', 'Este es un mensaje de Pedrito Sola desde el formulario.', 'pedritoSola@gmail.com', 1),
+(6, NULL, 'Alberto León', 'Este es un mensaje de prueba funcional en el formulario de contacto.', 'albertoleonm21@gmail.com', 0);
 
 -- --------------------------------------------------------
 
@@ -388,7 +401,7 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`idProducto`, `producto_idImagen`, `nombreProducto`, `pProducto`, `pVenta`, `ganancia`, `stock`, `baja_logica`, `lanzamiento`, `producto_idUsuario`, `descripcion`) VALUES
-(2, 2, 'Modificación juan', 123.12, 1234.1, 3332.94, 3, 1, 0, 5, 'Segunda descripcion');
+(2, 2, 'Modificación juan', 123.12, 1234.1, 3332.94, 3, 1, 0, 1, 'Segunda descripcion');
 
 -- --------------------------------------------------------
 
@@ -410,7 +423,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`idUsuario`, `nombre`, `contrasena`, `clave`, `estatus`) VALUES
 (1, 'Administrador', '12345', '1234567', 1),
-(5, 'Mario Perez', '123456asdf', '1238956', 0);
+(5, 'Luis Perez Ruiz', '0123456789', '1234567890', 0);
 
 --
 -- Índices para tablas volcadas
@@ -458,31 +471,31 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `idComentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idComentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  MODIFY `idImagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idImagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  MODIFY `idPregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idPregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
