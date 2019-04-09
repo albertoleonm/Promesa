@@ -29,7 +29,7 @@
         <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
             <h2><?=$detalle->nombreProducto;?></h2>
             <br>
-            <p><?=$detalle->nombreProducto;?></p>
+            <p><?=$detalle->descripcion;?></p>
             <br>
             <hr>
             <p>Detalle técnico</p>

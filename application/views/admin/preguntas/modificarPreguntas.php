@@ -24,13 +24,14 @@
             <i class="fas fa-user-shield"></i> Administrador
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#"><i class="fas fa-user-slash"></i> Cerrar sesión</a>
+            <a class="dropdown-item" href="<?=base_url();?>admin/logout"><i class="fas fa-user-slash"></i> Cerrar sesión</a>
             </div>
         </li>
         </ul>
     </div>
   </div>
 </nav>
+<!--TERMINA EL NAV-->
 <br>
 
 <div class="container">

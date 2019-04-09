@@ -6,7 +6,7 @@
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 producto">
             <center>
             <div class="card-producto d-md-none" style="width: 20rem; margin-bottom: 1rem;">
-                <img src="<?=base_url();?>images/images_upload/<?=$productos->imagen_1;?>" class="img-card" alt="<?=$productos->nombreProducto?>">
+                <img src="<?=base_url();?>images/images_upload/<?=$productos->imagen_1;?>" class="img-card img-fluid" alt="<?=$productos->nombreProducto?>">
                 <div class="card-body">
                     <h3 class="card-title"><?=$productos->nombreProducto?></h3>
                     <a href="<?=base_url();?>productos/detalleProducto/<?=$productos->idProducto?>" class="btn detail">Ver producto</a>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="product-image">
-                    <img src="<?=base_url();?>images/images_upload/<?=$productos->imagen_1;?>" alt="<?=$productos->nombreProducto?>">
+                    <img src="<?=base_url();?>images/images_upload/<?=$productos->imagen_1;?>" alt="<?=$productos->nombreProducto?>" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <img src="<?=base_url();?>images/images_upload/<?=$lanza->imagen_1;?>" class="img-card" alt="<?=$lanza->nombreProducto?>">
                     <div class="card-body">
                         <h3 class="card-title"><?=$lanza->nombreProducto?></h3>
-                        <a href="<?=base_url();?>productos/detalleProducto/<?=$lanza->idProducto?>" class="btn detail">Ver más</a>
+                        <a class="btn lanzamiento" disabled>Ver más</a>
                         <br>
                     </div>
                 </div>
